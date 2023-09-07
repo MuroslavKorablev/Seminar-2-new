@@ -1,14 +1,16 @@
-﻿// int number = 99;
-// Random random = new Random(); // Создаем объект Random один раз
+﻿// Напишите программу которая выводит случайное трехзначное число и удаляет вторую цифру этого числа
+int num1 = new Random().Next(100, 1000);
+System.Console.WriteLine(num1);
 
-// while (true) // Бесконечный цикл, который мы прерываем при достижении нужного условия
-// {
-//     int i = random.Next(10, 100);
-//     if (i >= number)
-//     {
-//         break; // Выходим из цикла, если i больше или равно number
-//     }
-//     System.Console.WriteLine(i);
-// }
+deleteSecondDigit(num1);
 
-    
+void deleteSecondDigit(int number)
+{
+    int firstDigit = number / 100; // Получаем первую цифру
+    int thirdDigit = number % 10;  // Получаем третью цифру
+    int result = firstDigit * 10 + thirdDigit; // Соединяем первую и третью цифры, удаляя вторую
+    System.Console.WriteLine(result); // Выводим результат
+}
+
+
+
